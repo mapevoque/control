@@ -1,7 +1,7 @@
 var functions = require('./function');
 var yandexMarketpage = require('./yandexMarketPage');
 describe('UI controls', function() {
-browser.waitForAngularEnabled(false);
+
   
   it('checkbox scroll', function() {
    yandexMarketpage.get();

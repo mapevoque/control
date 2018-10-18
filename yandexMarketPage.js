@@ -13,14 +13,17 @@ var marketPage = function() {
     check.click();
   };
   this.scrollDown = function() {
-    browser.executeScript('window.scrollTo(0,3300);').then(function(){
-	functions.sleep(5000);});
+    browser.executeScript("arguments[0].scrollIntoView();", radiobutton.getWebElement()).then(function(){
+		functions.sleep(5000);
+	});
+	
 	};
+	
   this.clickOnRadioButton = function() {
     radiobutton.click();
   };
    this.inputValue = function(value) {
-    browser.executeScript('window.scrollTo(0,1000);').then(function () {
+    browser.executeScript("arguments[0].scrollIntoView();", input.getWebElement()).then(function () {
     input.sendKeys(value);
 	functions.sleep(5000);});
   };
